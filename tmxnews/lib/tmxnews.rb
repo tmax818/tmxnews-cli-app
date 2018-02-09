@@ -1,9 +1,3 @@
-require "tmxnews/version"
+require_relative "./tmxnews/version"
 require "pry"
-
-module Tmxnews
-  # Your code goes here...
-  puts "Hello, world!"
-  x = Time.now 
-  binding.pry 
-end
+require_relative './tmxnews/cli'
