@@ -5,7 +5,10 @@ class Tmxnews::CLI
         puts "Welcome to Tmxnews"
     end 
 
-    def articles
+    def list_articles
+    end 
+
+    def menu
     end 
 
 end 
