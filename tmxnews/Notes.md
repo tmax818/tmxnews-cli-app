@@ -35,3 +35,5 @@ a deal has an avaiablity.
         article_2 = self.new
         article_2.name = "Title Artice 2"
         article_2.url = "https://www.wsj.com/"
+
+        git test 
