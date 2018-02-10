@@ -24,7 +24,7 @@ class Tmxnews::CLI
 
             if input.to_i > 0
                 the_article = @article[input.to_i-1]
-                puts "#{the_article.title} - #{the_article.url}"
+                puts "#{the_article.text} - #{the_article.url}"
             elsif input == "list"
                 list_articles
             else 

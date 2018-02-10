@@ -1,5 +1,5 @@
 class Tmxnews::Article # don't understand the reason for this namespacing.. 
-    attr_accessor :title, :by_line, :text, :url 
+    attr_accessor :title, :text, :url 
 
     def self.today          
         # return instances of article
@@ -20,11 +20,13 @@ class Tmxnews::Article # don't understand the reason for this namespacing..
     def self.scrape_nyt 
         doc = Nokogiri::HTML(open("https://www.nytimes.com"))
         title = doc.search("h2.story-heading").first.text
+        text = doc.search("article.story").first.css("li").text
         url = doc.search("h2.story-heading").first.css("a").attr("href").value
         #binding.pry
 
         article = self.new
         article.title = doc.search("h2.story-heading").first.text
+        article.text = doc.search("article.story").first.css("li").text
         article.url = doc.search("h2.story-heading").first.css("a").attr("href").value
         article 
     end 
@@ -32,11 +34,13 @@ class Tmxnews::Article # don't understand the reason for this namespacing..
     def self.scrape_wsj 
         doc = Nokogiri::HTML(open("https://www.wsj.com"))
         title = doc.search("h3.wsj-headline").first.text
+        text = doc.search("p.wsj-summary").first.text
         url = doc.search("h3.wsj-headline").first.css("a").attr("href").value
-        binding.pry
+        #binding.pry
 
         article = self.new
         article.title = doc.search("h3.wsj-headline").first.text
+        article.text = doc.search("p.wsj-summary").first.text
         article.url = doc.search("h3.wsj-headline").first.css("a").attr("href").value
         article 
     end 
