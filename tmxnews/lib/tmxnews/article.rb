@@ -1,18 +1,34 @@
 class Tmxnews::Article # don't understand the reason for this namespacing.. 
-    attr_accessor :name, :url 
+    attr_accessor :title, :by_line, :text, :url 
 
-    def self.today          # return instances of article
+    def self.today          
+        # return instances of article
+        # scrape nyt and wsj and return articles based on data 
         puts "Today's Headlines ... "
+        self.scrape_articles
+    end 
+    
+    
+    def self.scrape_articles
+        articles = []
 
-        article_1 = self.new
-        article_1.name = "The title of the first article...?"
-        article_1.url = "https://www.nytimes.com/"
+        articles << self.scrape_nyt
 
-        article_2 = self.new
-        article_2.name = "The title of the first article...?"
-        article_2.url = "https://www.wsj.com/"
+        articles   # by the end, return array of articles ..
+    end 
 
-        [article_1, article_2]  # by the end, return array of articles ..
+    def self.scrape_nyt 
+        doc = Nokogiri::HTML(open("https://www.nytimes.com"))
+        
+        title = doc.search("h2.story-heading").first.text
+        url = doc.search("h2.story-heading").first.css("a").attr("href").value
+        #binding.pry
+
+        article = self.new
+        article.title = doc.search("h2.story-heading").first.text
+        article.url = doc.search("h2.story-heading").first.css("a").attr("href").value
+        article 
+
 
     end 
 end 

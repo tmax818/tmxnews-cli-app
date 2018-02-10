@@ -10,12 +10,9 @@ class Tmxnews::CLI
         #this is where you get the data...
         @article = Tmxnews::Article.today 
         @article.each.with_index(1) do |article, i|
-            puts "#{i}. #{article.name} - #{article.url}"
+            puts "#{i}. #{article.title} - #{article.url}"
         end 
-
-
     end 
-
 
     def menu
         puts "Welcome to Tmxnews"
@@ -25,7 +22,8 @@ class Tmxnews::CLI
             input = gets.strip.downcase 
 
             if input.to_i > 0
-                puts @article[input.to_i-1]
+                the_article = @article[input.to_i-1]
+                puts "#{the_article.title} - #{the_article.url}"
             elsif input == "list"
                 list_articles
             else 

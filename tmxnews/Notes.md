@@ -27,3 +27,11 @@ A deal has a name
 A deal has a price 
 A deal has a URL 
 a deal has an avaiablity.
+
+        article_1 = self.new
+        article_1.name = "Title Article 1"
+        article_1.url = "https://www.nytimes.com/"
+
+        article_2 = self.new
+        article_2.name = "Title Artice 2"
+        article_2.url = "https://www.wsj.com/"
