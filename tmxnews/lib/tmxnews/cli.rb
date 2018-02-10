@@ -9,6 +9,10 @@ class Tmxnews::CLI
     def list_articles
         #this is where you get the data...
         @article = Tmxnews::Article.today 
+        @article.each.with_index(1) do |article, i|
+            puts "#{i}. #{article.name} - #{article.url}"
+        end 
+
 
     end 
 
@@ -19,15 +23,13 @@ class Tmxnews::CLI
         while input != "exit"
             puts "Enter the number of the article you would like to read or type 'exit' to exit"
             input = gets.strip.downcase 
-            case input
-                when "1"
-                    puts "Article 1 ..."
-                when "2"
-                    puts "Article 2 ..."
-                when "list"
+
+            if input.to_i > 0
+                puts @article[input.to_i-1]
+            elsif input == "list"
                 list_articles
-                else
-                    puts "Not sure what you want, type list exit or select an article..."
+            else 
+                puts "Not sure what you want, type list exit or select an article..."
             end 
         end 
     end 
