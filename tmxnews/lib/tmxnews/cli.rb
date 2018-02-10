@@ -14,8 +14,8 @@ class Tmxnews::CLI
     end 
 
     def menu
-        puts "Welcome to Tmxnews"
-        puts "Today's Headlines ... "
+        puts "////////////////Welcome to Tmxnews///////////////////"
+        puts "This gem provides a CLI interface that provides the top headlines from the New York Times and\n the Wall Street Journal. These publications were selected because of their reputations for excellence in journalism as well as\n being known for representing opposite ends of the political spectrum. The first option below (1) is the headline from the lead article from the New York Times website.\n The second option (2) is the headline for the lead article from the Wall Street Journal.\n Selecting each option will provide a brief summary of the article as well as a link to the complete article." 
         list_articles
         input = nil
         while input != "exit"
