@@ -16,6 +16,7 @@ class Tmxnews::CLI
 
     def menu
         puts "Welcome to Tmxnews"
+        puts "Today's Headlines ... "
         input = nil
         while input != "exit"
             puts "Enter the number of the article you would like to read or type 'exit' to exit"
@@ -27,7 +28,7 @@ class Tmxnews::CLI
             elsif input == "list"
                 list_articles
             else 
-                puts "Not sure what you want, type list exit or select an article..."
+                puts "Not sure what you want, type 'list', 'exit', or select an article..."
             end 
         end 
     end 
