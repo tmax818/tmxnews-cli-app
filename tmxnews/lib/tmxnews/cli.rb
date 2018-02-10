@@ -7,9 +7,8 @@ class Tmxnews::CLI
     end 
 
     def list_articles
-        puts "Today's Headlines ... "
         #this is where you get the data...
-        @article = Tmxnews::Article.all 
+        @article = Tmxnews::Article.today 
 
     end 
 
