@@ -1,3 +1,8 @@
-require_relative "./tmxnews/version"
+
+require 'open-uri'
+require 'nokogiri'
 require "pry"
+
+
+require_relative "./tmxnews/version"
 require_relative './tmxnews/cli'
