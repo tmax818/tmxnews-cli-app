@@ -11,8 +11,6 @@ class Tmxnews::Article
 
         articles << self.scrape_nyt
         articles << self.scrape_wsj
-
-        #articles
     end
 
     def self.scrape_nyt
