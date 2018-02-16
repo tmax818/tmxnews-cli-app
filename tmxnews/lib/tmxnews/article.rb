@@ -18,9 +18,10 @@ class Tmxnews::Article
 
         article = self.new
         article.title = doc.search("h2.story-heading").first.text
-        article.text = doc.search("article.story").first.css("li").text
+        article.text = doc.search("article").css("ul").text
         article.url = doc.search("h2.story-heading").first.css("a").attr("href").value
         article
+        #binding.pry
     end
 
     def self.scrape_wsj
