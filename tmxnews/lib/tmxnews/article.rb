@@ -1,6 +1,8 @@
 class Tmxnews::Article
     attr_accessor :title, :text, :url
 
+      @@all = []
+
     def self.today
         Tmxnews::Scraper.scrape_articles
     end
