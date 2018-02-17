@@ -4,10 +4,6 @@ class Tmxnews::CLI
 
   include HelloGoodbye
 
-    def call
-        menu
-    end
-
     def menu
         hello
         @article = Tmxnews::Article.list_articles
