@@ -10,7 +10,7 @@ class Tmxnews::Article
 
   def self.list_articles
       articles.each.with_index(1) do |article, i|
-      puts "\t#{i}. #{article.title}"
+      puts "#{i}. #{article.title}"
       puts
       end
   end

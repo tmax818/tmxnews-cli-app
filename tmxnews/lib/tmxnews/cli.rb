@@ -14,7 +14,7 @@ class Tmxnews::CLI
 
             if input.to_i > 0
                 the_article = @article[input.to_i-1]
-                puts "\nHeadline: #{the_article.title}\n Summary: #{the_article.text} URL: #{the_article.url}"
+                puts "Headline: #{the_article.title} Summary: #{the_article.text} URL: #{the_article.url}"
             elsif input == "list"
                 list_articles
             elsif input == "exit"
