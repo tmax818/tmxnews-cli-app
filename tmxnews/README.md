@@ -1,9 +1,11 @@
 # Tmxnews
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tmxnews`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides a CLI that displays the top headlines from the New York Times and the Wall Street Journal. These publications were selected because of their reputations for excellence in journalism as well as being known for representing opposite ends of the political spectrum.
 
-TODO: Delete this and the text above, and describe your gem
+(1) is the headline from the lead article from the New York Times website.
+(2) is the headline for the lead article from the Wall Street Journal.
 
+Selecting each option will provide a brief summary of the article as well as a link to the complete article.
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -26,7 +28,6 @@ TODO: Write usage instructions here
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
@@ -36,4 +37,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/tmax81
 
 ## Code of Conduct
 
-Everyone interacting in the Tmxnews project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/tmxnews/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Tmxnews project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/tmax818/tmxnews/blob/master/CODE_OF_CONDUCT.md).
