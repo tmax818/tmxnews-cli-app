@@ -5,7 +5,7 @@ class Tmxnews::Scraper
       doc = Nokogiri::HTML(open("https://www.nytimes.com"))
       article = self.new
       article.title = doc.search("h2.story-heading").first.text
-      article.text = doc.search("article").css("ul").text
+      article.text = doc.search("article").css("ul li").text
       article.url = doc.search("h2.story-heading").first.css("a").attr("href").value
       article
   end
