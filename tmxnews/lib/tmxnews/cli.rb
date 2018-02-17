@@ -4,18 +4,9 @@ class Tmxnews::CLI
         menu
     end
 
-    def list_articles
-        @article = Tmxnews::Article.new.all
-        #binding.pry
-        @article.each.with_index(1) do |article, i|
-            puts "\t#{i}. #{article.title}"
-            puts
-        end
-    end
-
     def menu
         hello
-        list_articles
+        @article = Tmxnews::Article.list_articles
         input = nil
         while input != "exit"
             puts "Enter the number of the article you would like to read or type 'exit' to end the program."

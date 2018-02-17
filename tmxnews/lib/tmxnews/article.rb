@@ -2,17 +2,17 @@ class Tmxnews::Article
 
   @@all = []
 
-  def initialize
+  def self.articles
     @@all << Tmxnews::Scraper.scrape_nyt
     @@all << Tmxnews::Scraper.scrape_wsj
-  end
-
-  def all 
     @@all
   end
 
+  def self.list_articles
+      articles.each.with_index(1) do |article, i|
+      puts "\t#{i}. #{article.title}"
+      puts
+      end
+  end
 
-    # def self.today
-    #     Tmxnews::Scraper.scrape_articles
-    # end
 end
