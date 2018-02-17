@@ -5,7 +5,8 @@ class Tmxnews::CLI
     end
 
     def list_articles
-        @article = Tmxnews::Article.today
+        @article = Tmxnews::Article.new.all
+        #binding.pry
         @article.each.with_index(1) do |article, i|
             puts "\t#{i}. #{article.title}"
             puts

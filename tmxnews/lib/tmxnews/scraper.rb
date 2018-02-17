@@ -1,11 +1,12 @@
 class Tmxnews::Scraper
     attr_accessor :title, :text, :url
 
-  def self.scrape_articles
-      articles = []
-      articles << self.scrape_nyt
-      articles << self.scrape_wsj
-  end
+
+  # def self.scrape_articles
+  #     articles = []
+  #     articles << self.scrape_nyt
+  #     articles << self.scrape_wsj
+  # end
 
   def self.scrape_nyt
       doc = Nokogiri::HTML(open("https://www.nytimes.com"))
