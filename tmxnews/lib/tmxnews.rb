@@ -7,3 +7,4 @@ require "pry"
 require_relative "./tmxnews/version"
 require_relative './tmxnews/cli'
 require_relative './tmxnews/article'
+require_relative './tmxnews/scraper'

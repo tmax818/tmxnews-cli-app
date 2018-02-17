@@ -1,4 +1,3 @@
-# CLI Controller - dealing with user interactions
 class Tmxnews::CLI
 
     def call
@@ -6,7 +5,6 @@ class Tmxnews::CLI
     end
 
     def list_articles
-        #this is where you get the data...
         @article = Tmxnews::Article.today
         @article.each.with_index(1) do |article, i|
             puts "\t#{i}. #{article.title}"
@@ -24,13 +22,13 @@ class Tmxnews::CLI
 
             if input.to_i > 0
                 the_article = @article[input.to_i-1]
-                puts "Headline: #{the_article.title}\n Summary: #{the_article.text}\n URL: #{the_article.url}"
+                puts "\nHeadline: #{the_article.title}\n Summary: #{the_article.text} URL: #{the_article.url}"
             elsif input == "list"
                 list_articles
             elsif input == "exit"
                 good_bye
             else
-                puts "Not sure what you want, type 'list', 'exit', or select an article."
+                puts "Not sure what you want, type 'list', 'exit', or select an article number."
             end
         end
     end
