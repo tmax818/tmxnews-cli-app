@@ -18,16 +18,15 @@ class Tmxnews::CLI
 
             if input.to_i > 0
                 the_article = @article[input.to_i-1]
-                puts "Headline: #{the_article.title} Summary: #{the_article.text} URL: #{the_article.url}"
-            elsif input == "list"
-                list_articles
+                puts "Headline: #{the_article.title}"
+                puts "Summary: #{the_article.text}"
+                puts "URL: #{the_article.url}"
             elsif input == "exit"
                 good_bye
             else
-                puts "Not sure what you want, type 'list', 'exit', or select an article number."
+                puts "Please type 'exit' or select an article number."
             end
+
         end
     end
-
-
 end
