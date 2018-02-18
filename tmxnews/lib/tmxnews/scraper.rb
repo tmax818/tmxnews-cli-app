@@ -18,5 +18,4 @@ class Tmxnews::Scraper
       article.url = doc.search("h3.wsj-headline").first.css("a").attr("href").value
       article
   end
-
 end

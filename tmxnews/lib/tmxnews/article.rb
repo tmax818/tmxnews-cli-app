@@ -14,5 +14,4 @@ class Tmxnews::Article
       puts
       end
   end
-
 end

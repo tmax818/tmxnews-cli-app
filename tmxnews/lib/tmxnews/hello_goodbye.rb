@@ -14,5 +14,4 @@ module HelloGoodbye
   def good_bye
       puts "Thank you for using Tmxnews! Check in tomorrow for the headlines."
   end
-
-end 
+end

@@ -22,7 +22,6 @@ class Tmxnews::CLI
             else
                 puts "Please type 'exit' or select an article number."
             end
-
         end
     end
 end
